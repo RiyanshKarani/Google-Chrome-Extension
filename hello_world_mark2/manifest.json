@@ -1,0 +1,32 @@
+{
+	"manifest_version" : 2,
+	"name" : "Bookmarks Manager",
+	"version" : "1.0",
+	"description" : "bookmarks manager",
+
+	"browser_action" : {
+		"default_icon" : "images/icon380.png",
+		//"default_popup" : "html/popup.html",
+		"default_tooltip" : "bookmarks manager"
+	},
+
+	"icons" : {
+			"128" : "images/icon380.png"
+		},
+
+	// "content_scripts" : [
+	// 	{
+	// 		"matches" : ["http://*/*","https://*/*"],
+	// 		"js" : ["javascript/content_script.js"]
+	// 	}
+	// ]
+
+	"permissions" : [
+		"tabs", "http://*/*", "https://*/*", "activeTab","https://www.google.com/_/chrome/newtab*"
+	],
+
+	"background" : {
+		"scripts" : ["javascript/background.js"]
+	}
+
+}
